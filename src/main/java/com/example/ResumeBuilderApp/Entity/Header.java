@@ -1,5 +1,6 @@
 package com.example.ResumeBuilderApp.Entity;
 
+import com.example.ResumeBuilderApp.Validator.PhoneNumberValidation;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,8 +29,7 @@ public class Header {
     @NotEmpty
     @Email
     private String emailAddress;
-    @NotEmpty
-    @Size(min = 10,max = 10)
+    @PhoneNumberValidation
     private String phoneNo;
 
     private String address;
